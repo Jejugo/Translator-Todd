@@ -1,0 +1,53 @@
+@import '../../styles/index.scss';
+
+.navbar{
+    background-color: rgb(39, 39, 39);
+    height: 80px;
+    transition: height 1s;
+    align-items: center;
+
+    &-stick{
+        background-color: rgb(39, 39, 39);
+        transition: height 1s;
+        height: 50px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 3;
+    }
+
+    &__content{
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        &_title{
+            margin-left: 5vh;
+            color: white;
+            font-family: $raleway;
+            font-size: $bigText;
+        }
+
+        &_list{ 
+            margin-right: 5vh;
+            &--item{
+                margin: 10px;
+                list-style: none;
+            }
+
+            &--link{
+                text-decoration: none;
+                color: white;
+                font-family: $raleway;
+                font-size: $normal;
+
+                &:hover{
+                    font-size: $normal + 2px;
+                    transition: ease-in 0.2s;
+                }
+            }
+        }
+    }
+
+}
+

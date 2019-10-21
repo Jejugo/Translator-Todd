@@ -1,0 +1,175 @@
+.container {
+   width: 100%;
+   max-width: 1216px;
+   margin: 0 auto;
+}
+
+.timeline-container{
+   width: 98.7%;
+}
+
+.container-box {
+   box-sizing: border-box;
+}
+
+.flex {
+   display: flex;
+}
+
+.flex-wrap {
+   flex-wrap: wrap;
+}
+
+.nowrap {
+   flex-wrap: nowrap;
+}
+
+.row {
+   flex-direction: row;
+}
+.row-reverse {
+   flex-direction: row-reverse;
+}
+.column {
+   flex-direction: column;
+}
+.column-reverse {
+   flex-direction: column-reverse;
+}
+
+.grow0 {
+   flex-grow: 0;
+}
+
+.grow1 {
+   flex-grow: 1;
+}
+
+.grow2 {
+   flex-grow: 2;
+}
+
+.order1 {
+   order: 1;
+}
+
+.order2 {
+   order: 2;
+}
+
+.order3 {
+   order: 3;
+}
+
+.order4 {
+   order: 4;
+}
+
+.order-1 {
+   order: -1;
+}
+
+
+// Justify Content
+.flex-start {
+   justify-content: flex-start;
+}
+
+.flex-end {
+   justify-content: flex-end;
+}
+
+.center {
+   justify-content: center;
+}
+
+.space-between {
+   justify-content: space-between;
+}
+
+.space-around {
+   justify-content: space-around;
+}
+
+.space-evenly {
+   justify-content: space-evenly;
+}
+
+
+// Align-items
+.item-stretch {
+   align-items: stretch;
+}
+
+.item-flex-start {
+   align-items: flex-start;
+}
+
+.item-flex-end {
+   align-items: flex-end;
+}
+
+.item-center {
+   align-items: center;
+}
+
+.item-baseline {
+   align-items: baseline;
+}
+
+// Align-content
+.content-stretch {
+   align-content: stretch;
+}
+
+.content-flex-start {
+   align-content: flex-start;
+}
+
+.content-flex-end {
+   align-content: flex-end;
+}
+
+.content-center {
+   align-content: center;
+}
+
+.content-space-between {
+   align-content: space-between;
+}
+
+.content-space-around {
+   align-content: space-around;
+}
+
+// Align-self
+.self-flex-start {
+   align-self: flex-start;
+}
+
+.self-flex-end {
+   align-self: flex-end;
+}
+
+.self-center {
+   align-self: center;
+}
+
+.self-baseline {
+   align-self: baseline;
+}
+
+.self-stretch {
+   align-self: stretch;
+}
+
+.self-align-items {
+   align-items: flex-end;
+}
+
+@media screen and (max-width: 416px) {
+   .container-body {
+       padding: 0 16px;
+       max-width: 100%;
+   }
+}

@@ -1,0 +1,19 @@
+@import 'grid.scss';
+@import 'fonts.scss';
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+p, h1, button{
+    font-family: $raleway;
+}
+
+.sc-chat-window{
+    max-height: 420px;
+}
+
+.sc-message--content.sent .sc-message--text{
+    padding: 10px;
+}

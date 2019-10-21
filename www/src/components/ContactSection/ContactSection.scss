@@ -1,0 +1,17 @@
+.contact-section{
+    background-color: rgba(236, 236, 250, 0.933);
+    padding: 15vh;
+
+    &__title{
+        text-align: center;
+    }
+
+    &__text{
+        text-align: center;
+    }
+
+    &__contact-form{
+        width: 60%;
+        margin: 0 auto;
+    }
+}

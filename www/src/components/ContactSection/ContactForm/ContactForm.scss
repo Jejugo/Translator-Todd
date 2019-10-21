@@ -1,0 +1,50 @@
+@import '../../../styles/index.scss';
+
+.contact-form{
+    flex-direction: column;
+
+    &__send-buttons{
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__block{
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    &__input{
+        width: 100%;
+        padding: 12px;
+        font-family: $raleway;
+        font-size: 16px;
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid #cccccc;
+    }
+
+    &__textarea{
+        height: 100px;
+        padding: 12px;
+        width: 100%;
+        font-size: 16px;
+        resize: none;
+        border-radius: 5px;
+        outline: none;
+        border: 1px solid #cccccc;
+        font-family: $raleway
+    }
+
+    &__label{
+        font-family: $raleway;
+        width: 100%;
+        display: block;
+        flex-basis: 80%;
+        margin: 5px;
+    }
+
+    &__submit{
+        flex-basis: 10vw;
+        padding: 10px;
+    }
+}

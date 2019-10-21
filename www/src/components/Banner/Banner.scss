@@ -1,0 +1,18 @@
+.banner{
+    background-color: rgba(236, 236, 250, 0.933);
+}
+
+.aws-sld__bullets{
+    bottom: 50px;
+    z-index: 2;
+}
+
+.aws-sld__bullets .aws-sld__bullets--active{
+    background: white;
+    border: 0.1px solid grey;
+}
+
+.aws-sld__bullets button{
+    background: white;
+    border: 0.1px solid grey;
+}
