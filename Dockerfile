@@ -1,0 +1,4 @@
+FROM node:10
+MAINTAINER Jeff Goes
+WORKDIR /app
+COPY . .

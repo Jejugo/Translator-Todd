@@ -10,8 +10,8 @@ export default class ContactForm extends Component {
             name: '',
             subject: '',
             text: '',
-            file: null
-        }
+            sampleFile: null
+        };
 
         this.handleInputs = this.handleInputs.bind(this);
         this.insertFile = this.insertFile.bind(this);
@@ -21,25 +21,30 @@ export default class ContactForm extends Component {
     handleInputs(e){
         this.setState({
             [e.target.name]: e.target.value
-        })
+        });
     }
 
     insertFile(e){
         e.preventDefault();
-        console.log('e.target: ', e.target.files[0])
         this.setState({
-            file: e.target.files[0]
-        })
+            sampleFile: e.target.files[0]
+        });
     }
 
     submitValue(e){
+        const { file } = this.state;
         e.preventDefault();
-        console.log('file: ', this.state)
-        fetch('http://localhost:3000/register', {
+
+        //could have used the state directly, but since I need to pass a file along with it. Its best to use FormData()
+        const data = new FormData();
+        Object.keys(this.state).map((key, value) => {
+            data.append(`${key}`, this.state[key])
+        })
+        axios({
+        url: 'http://localhost:3000/register',
         method: 'POST',
-        headers: {'Content-Type': 'multipart/form-data'},
-        body: this.state
-        });
+        data: data
+        })
     }
 
     render() {
@@ -48,7 +53,7 @@ export default class ContactForm extends Component {
 
         return (
             <React.Fragment>
-                <form className="contact-form flex container" onSubmit={(e) => this.submitValue(e)} encType="multipart/form-data">
+                <form className="contact-form flex container" onSubmit={(e) => this.submitValue(e)}>
                     <div className="contact-form__block flex column">
                         <label htmlFor="name" className="contact-form__label">Nome: </label>
                         <input name="name" id="name" className="contact-form__input" placeholder="Digite seu nome" onChange={(e) => this.handleInputs(e)} value={name}/>
