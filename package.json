@@ -4,7 +4,8 @@
   "description": "Boilerplate for React apps",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --hot",
+    "start": "cd www; webpack-dev-server --mode development --hot",
+    "server": "nodemon server/app.js",
     "build": "webpack --mode production"
   },
   "author": "Jeff Goes",
@@ -15,7 +16,14 @@
     "react": "^16.2.0",
     "react-awesome-slider": "^1.0.1",
     "react-chat-window": "^1.2.1",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "googleapis": "^39.2.0",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.3.0",
+    "whatsapp-chapi": "^1.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -31,6 +39,7 @@
     "svg-inline-loader": "^0.8.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7",
-    "webpack-dev-server": "^3.1.1"
+    "webpack-dev-server": "^3.1.1",
+    "nodemon": "^1.19.4"
   }
 }
