@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const bodyParser = require("body-parser");
-const nodemailer = require("nodemailer");``
+const nodemailer = require("nodemailer");
+const rimraf = require("rimraf");
 var multer  = require('multer')
 
 //importing google API to send emails
@@ -83,14 +84,18 @@ router.post('/register', upload.single('sampleFile'), (req, res) => {
     }
     else{
       if (req.file) {
-        return res.send({
-          status: 200,
-          message: 'File is uploaded',
-          data: {
-              name: req.file.originalname,
-              mimetype: req.file.mimetype,
-              size: req.file.size
-          }
+        //delete upload folder before sending the request back
+        rimraf(`${process.cwd()}/uploads/${req.file.originalname}`, () => { 
+          console.log("folder deleted"); 
+          return res.send({
+            status: 200,
+            message: 'File is uploaded',
+            data: {
+                name: req.file.originalname,
+                mimetype: req.file.mimetype,
+                size: req.file.size
+            }
+          });
         });
       }
       else{

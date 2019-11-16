@@ -5,7 +5,8 @@ import FirstSection from "./components/FirstSection/FirstSection";
 import SecondSection from "./components/SecondSection/SecondSection";
 import ContactForm from "./components/ContactSection/ContactSection";
 import Footer from "./components/Footer/Footer";
-import { Launcher } from "react-chat-window";
+import SocialMedia from "./components/SocialMedia/SocialMedia";
+// import { Launcher } from "react-chat-window";
 import axios from "axios";
 
 class App extends Component {
@@ -89,7 +90,8 @@ class App extends Component {
         <SecondSection setSectionsPosition={this.setSectionsPosition}></SecondSection>
         <ContactForm setSectionsPosition={this.setSectionsPosition}></ContactForm>
         <Footer></Footer>
-        <Launcher
+        <SocialMedia></SocialMedia>
+        {/* <Launcher
           agentProfile={{
             teamName: "Conversa",
             imageUrl:
@@ -98,7 +100,7 @@ class App extends Component {
           onMessageWasSent={this._onMessageWasSent}
           messageList={this.state.messageList}
           showEmoji
-        />
+        /> */}
       </div>
     );
   }
