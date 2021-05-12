@@ -18,7 +18,7 @@
     "express": "^4.17.1",
     "googleapis": "^39.2.0",
     "multer": "^1.4.2",
-    "nodemailer": "^6.3.0",
+    "nodemailer": "^6.4.16",
     "react": "^16.2.0",
     "react-awesome-slider": "^1.0.1",
     "react-chat-window": "^1.2.1",
